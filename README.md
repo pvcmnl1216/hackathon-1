@@ -1,7 +1,19 @@
 ### Instructions for Hackathon
 
-#### 1. Read the PROBLEM.md 
-#### 2. Write the program logic inside the SortingCities class
-#### 3. Write the test cases inside the class inside the test folder.
-#### 4. Execute the test cases and push your code to git.
-#### 5. Give your repository access to mentor.
+#### The mentor to conduct the hackathon as a 3-hour coding challenge for the learners after Course 2.
+
+#### There is no boilerplate for the hackathon.
+
+#### A bare bone structure of the Java project is given.
+
+#### The learners must create the methods and write the logic for all the tasks given.
+
+#### Learners must write JUnit test cases for all the methods created.
+
+#### The learners must push the code to a git repository and provide access to the mentor after the end of 3 hours.
+
+#### Mentor must do code review of a few of the learner's code and raise issues on git itself.
+
+#### The review must happen online in front of the learner itself.
+
+#### Provide another 1 hour for the learners to refactor the code. 
