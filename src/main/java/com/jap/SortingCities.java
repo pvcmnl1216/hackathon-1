@@ -3,43 +3,55 @@ package com.jap;
 public class SortingCities {
 
     public static String[] City() {
-        String[] Cities = {"Bern,", "Lucerne,", "InterLaken,", "GrindelWald,", "EngelBerg,", "Geneva,", "Murren,", "Basel,", "Zermatt,", "JungFrauJoch" };
 
-        return new String[0];
+        return new String[]{"Bern,", "Lucerne,", "InterLaken,", "GrindelWald,", "EngelBerg,", "Geneva,", "Murren,", "Basel,", "Zermatt,", "JungFrauJoch"};
     }
 
     public static int[] Kilometers() {
-        int[] Kms = {138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
-        return Kms;
+        return new int[]{138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
     }
 
-    public String uppercase(String[] Cities) {
-        String cityName = "";
-        for (int i = 0; i < Cities.length; i++) {
-            cityName = "".concat(Cities[i].toUpperCase());
+    public static String uppercase(String[] Cities) {
+        StringBuilder cityName = new StringBuilder();
+        for (String city : Cities) {
+            cityName.append("".concat(city).toUpperCase());
         }
 
-        return cityName;
+        return cityName.toString();
     }
 
-    public String findnearestcity(String[] city) {
+    public static String findnearestcity(int[] distance, String[] cities) {
         String cityname = "";
-        for (int i = 0; i < city.length; i++) {
-            if (Kms[i] == 52) {
-                cityname = city[i];
+        for (int i = 0; i < distance.length; i++) {
+            if (distance[i] == 52) {
+                cityname = cities[i];
             }
         }
         return cityname;
 
     }
 
-    public String findfarestcity(String[] city) {
-        String cityname = "";
-        for (int i = 0; i < city.length; i++) {
-            if (Kms[i] >= 270) ;
+    public static String findfarestcity(int[] distance, String[] cities) {
+        String cityName = "";
+        for (int i = 0; i < distance.length; i++) {
+            if (distance[i] >= 270) {
+                cityName = cities[i];
+            }
 
         }
-        return null;
+        return cityName;
     }
 
+    public static void main(String[] args) {
+        String[] cities = City();
+        int[] distance = Kilometers();
+        String upperCase = uppercase(cities);
+        System.out.println(upperCase);
+        String city = findnearestcity(distance, cities);
+        System.out.println("Nearest city from zurich = " + city);
+        String CityDistance = findfarestcity(distance, cities);
+        System.out.println("longest city from zurich = " + CityDistance);
+
+
+    }
 }
