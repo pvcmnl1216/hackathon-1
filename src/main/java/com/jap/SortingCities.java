@@ -14,5 +14,12 @@ public class SortingCities {
         return Kms;
     }
 
+    public String uppercase(String[] Cities) {
+        String cityName = "";
+        for (int i = 0; i < Cities.length; i++) {
+            cityName = "".concat(Cities[i].toUpperCase());
+        }
 
+        return cityName;
+    }
 }
