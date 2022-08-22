@@ -8,5 +8,11 @@ public class SortingCities {
         return new String[0];
     }
 
+    public static int[] Kilometers() {
+        int[] Kms = {138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
+
+        return Kms;
+    }
+
 
 }
