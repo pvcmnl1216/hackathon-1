@@ -1,19 +1,7 @@
 package com.jap;
 
 public class SortingCities {
-    public static void main(String[] args) {
-        String[] cities = City();
-        int[] distance = KiloMeter();
-        SortingCities sortingCities = new SortingCities();
-        String upperCase = sortingCities.upperCase(cities);
-        System.out.println(upperCase);
-        String city = sortingCities.findnearestCity(distance, cities);
-        System.out.println("Nearest city from zurich = " + city);
-        String CityDistance = sortingCities.finddistance(distance, cities);
-        System.out.println("longest city from zurich = " + CityDistance);
 
-
-    }
 
     public static String[] City() {
         String[] cityName = {"Bern,", "Lucerne,", "Interlaken,", "Grindelwald,", "Engelberg,", "Geneva,", "Murren,", "Basel,", "Zermatt,", "Jungfraujoch." };
@@ -60,4 +48,17 @@ public class SortingCities {
         return cityName;
     }
 
+    public static void main(String[] args) {
+        String[] cities = City();
+        int[] distance = KiloMeter();
+        SortingCities sortingCities = new SortingCities();
+        String upperCase = sortingCities.upperCase(cities);
+        System.out.println(upperCase);
+        String city = sortingCities.findnearestCity(distance, cities);
+        System.out.println("Nearest city from zurich = " + city);
+        String CityDistance = sortingCities.finddistance(distance, cities);
+        System.out.println("longest city from zurich = " + CityDistance);
+
+
+    }
 }
