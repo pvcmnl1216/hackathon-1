@@ -1,19 +1,30 @@
 package com.jap;
 
-import org.junit.After;
-import org.junit.Before;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class SortingCitiesTest {
 
-    @Before
-    public void setUp()  {
+    SortingCities sortingCities;
+
+    @BeforeEach
+    public void setUp() {
+        sortingCities = new SortingCities();
     }
 
-    @After
-    public void tearDown()  {
+    @AfterEach
+    public void tearDown() {
     }
 
-    //write all the test cases here
+    @Test
+    void shouldgivethenearestcity() {
+        //arrange:
+        int[] KiloMeter = {138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
+        String expectedresult = "Geneva";
+        String[] cityname = new String[0];
+        String actualresult = sortingCities.findnearestCity(KiloMeter, cityname);
+    }
+
 }
