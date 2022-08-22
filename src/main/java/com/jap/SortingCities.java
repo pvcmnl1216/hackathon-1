@@ -10,7 +10,6 @@ public class SortingCities {
 
     public static int[] Kilometers() {
         int[] Kms = {138, 52, 118, 136, 85, 276, 103, 87, 214, 101};
-
         return Kms;
     }
 
@@ -22,4 +21,13 @@ public class SortingCities {
 
         return cityName;
     }
-}
+
+    public String findnearestcity(String[] city) {
+        String cityname = "";
+        for (int i = 0; i < city.length; i++) {
+            if (Kms[i] == 52) {
+                cityname = city[i];
+            }
+        }
+        return cityname;
+    }
