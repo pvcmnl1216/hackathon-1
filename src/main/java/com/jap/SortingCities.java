@@ -30,4 +30,16 @@ public class SortingCities {
             }
         }
         return cityname;
+
     }
+
+    public String findfarestcity(String[] city) {
+        String cityname = "";
+        for (int i = 0; i < city.length; i++) {
+            if (Kms[i] >= 270) ;
+
+        }
+        return null;
+    }
+
+}
